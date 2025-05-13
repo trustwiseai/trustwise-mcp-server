@@ -12,7 +12,7 @@ The **Trustwise MCP Server** is a [Model Context Protocol (MCP)](https://modelco
 ## 🛠️ Prerequisites
 
 - A Trustwise API Key ([get one here](https://trustwise.ai))
-- Docker; Follow the [install instructions](https://docs.docker.com/engine/install/) 
+- Docker; Follow the [install instructions](https://docs.docker.com/desktop/) 
 
 ## 📦 Installation & Running
 
