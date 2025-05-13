@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Trustwise support
+    url: "mailto:support@trustwise.ai"
+    about: |
+      Please only file issues here that you believe represent actual bugs or feature requests for the Trustwise MCP Server.
+      For SDK related issues, please file an issue on the [Trustwise SDK GitHub Repository](https://github.com/trustwiseai/trustwise)
+      For general questions or support with the Trustwise API, please email us at support@trustwise.ai.
