@@ -24,7 +24,6 @@ FROM python:3.12-slim-bookworm
 WORKDIR /app
 
 # Copy installed packages and venv from builder
-COPY --from=uv /root/.local /root/.local
 COPY --from=uv /app/.venv /app/.venv
 COPY --from=uv /app /app
 
