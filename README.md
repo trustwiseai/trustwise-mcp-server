@@ -30,7 +30,7 @@ To connect the Trustwise MCP Server to Claude Desktop, add the following configu
         "--rm",
         "-e",
         "TW_API_KEY",
-        "<DOCKER_REGISTRY>/trustwise-mcp-server:v1.0.0"
+        "ghcr.io/trustwiseai/trustwise-mcp-server:latest"
       ],
       "env": {
         "TW_API_KEY": "<YOUR_TRUSTWISE_API_KEY>"
