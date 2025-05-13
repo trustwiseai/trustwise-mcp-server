@@ -1,27 +1,21 @@
-# Trustwise MCP Server
+# 🦉 Trustwise MCP Server
 
 The **Trustwise MCP Server** is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) server that provides a suite of advanced evaluation tools for AI safety, alignment, and performance. It enables developers and AI tools to programmatically assess the quality, safety, and cost of LLM outputs using Trustwise's industry-leading metrics.
 
----
-
-## Use Cases
+## 💡 Use Cases
 
 - Evaluating the safety and reliability of LLM responses.
 - Measuring alignment, clarity, and helpfulness of AI-generated content.
 - Estimating the carbon footprint and cost of model inference.
 - Integrating robust evaluation into AI pipelines, agents, or orchestration frameworks.
 
----
-
-## Prerequisites
+## 🛠️ Prerequisites
 
 - Python 3.11 or higher (if running locally)
 - A Trustwise API Key ([get one here](https://trustwise.ai))
 - (Optional) Docker, if you wish to use containerized deployment
 
----
-
-## Installation & Running (Claude Desktop Example)
+## 📦 Installation & Running (Claude Desktop Example)
 
 To connect the Trustwise MCP Server to Claude Desktop, add the following configuration to your Claude Desktop settings:
 
@@ -48,13 +42,11 @@ To connect the Trustwise MCP Server to Claude Desktop, add the following configu
 
 Replace `<YOUR_TRUSTWISE_API_KEY>` with your actual Trustwise API key.
 
----
-
-## Tools
+## 🧰 Tools
 
 The Trustwise MCP Server exposes the following tools (metrics). Each tool can be called with the specified arguments to evaluate a model response.
 
-### Safety Metrics
+### 🛡️ Safety Metrics
 
 | Tool Name                | Description                                               | Arguments                                                                                  |
 |--------------------------|-----------------------------------------------------------|--------------------------------------------------------------------------------------------|
@@ -65,7 +57,7 @@ The Trustwise MCP Server exposes the following tools (metrics). Each tool can be
 | `prompt_injection_metric`| Detect prompt injection risk                             | `query: str`, `response: str`, `context: list[dict]`                                       |
 | `summarization_metric`   | Evaluate summarization quality                           | `query: str`, `response: str`, `context: list[dict]`                                       |
 
-### Alignment Metrics
+### 🎯 Alignment Metrics
 
 | Tool Name                | Description                                               | Arguments                                                                                  |
 |--------------------------|-----------------------------------------------------------|--------------------------------------------------------------------------------------------|
@@ -77,7 +69,7 @@ The Trustwise MCP Server exposes the following tools (metrics). Each tool can be
 | `tone_metric`            | Evaluate tone of a response                              | `response: str`                                                                            |
 | `toxicity_metric`        | Evaluate toxicity of a response                          | `response: str`                                                                            |
 
-### Performance Metrics
+### ⚡ Performance Metrics
 
 | Tool Name                | Description                                               | Arguments                                                                                  |
 |--------------------------|-----------------------------------------------------------|--------------------------------------------------------------------------------------------|
@@ -85,15 +77,12 @@ The Trustwise MCP Server exposes the following tools (metrics). Each tool can be
 | `cost_metric`            | Estimate cost of a response                              | `model_name: str`, `model_type: str`, `model_provider: str`, `number_of_queries: int`, `total_prompt_tokens: int`, `total_completion_tokens: int`, `total_tokens: int (optional)`, `instance_type: str (optional)`, `average_latency: float (optional)` |
 
 > For more examples and advanced usage, see the official [Trustwise SDK](https://pypi.org/project/trustwise/).
----
 
-## License
+## 📄 License
 
 This project is licensed under the terms of the MIT open source license. See [LICENSE](./LICENSE) for details.
 
----
-
-## Security
+## 🔒 Security
 
 - **Do not commit secrets or API keys.**
 - This repository is public; review all code and documentation for sensitive information before pushing.
