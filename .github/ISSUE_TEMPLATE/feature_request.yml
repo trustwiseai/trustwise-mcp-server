@@ -9,7 +9,7 @@ body:
   - type: checkboxes
     id: non_api
     attributes:
-      label: Confirm this is a feature request for the Python library and not the underlying Trustwise API.
+      label: Confirm this is a feature request for the MCP Server and not the underlying Trustwise API/SDK.
       description: Feature requests for the underlying Trustwise API should be reported on our [Support Email](mailto:support@trustwise.ai); For SDK should be reported on the [Trustwise SDK GitHub Repository](https://github.com/trustwiseai/trustwise)
       options:
         - label: This is a feature request for the MCP Server
