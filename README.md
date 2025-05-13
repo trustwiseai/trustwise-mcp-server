@@ -106,7 +106,7 @@ The Trustwise MCP Server exposes the following tools (metrics). Each tool can be
 
 ## 📄 License
 
-This project is licensed under the terms of the MIT open source license. See [LICENSE](./LICENSE) for details.
+This project is licensed under the terms of the MIT open source license. See [LICENSE](./LICENSE.md) for details.
 
 ## 🔒 Security
 
