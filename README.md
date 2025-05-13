@@ -11,13 +11,39 @@ The **Trustwise MCP Server** is a [Model Context Protocol (MCP)](https://modelco
 
 ## 🛠️ Prerequisites
 
-- Python 3.11 or higher (if running locally)
 - A Trustwise API Key ([get one here](https://trustwise.ai))
-- (Optional) Docker, if you wish to use containerized deployment
+- Docker; Follow the [install instructions](https://docs.docker.com/engine/install/) 
 
-## 📦 Installation & Running (Claude Desktop Example)
+## 📦 Installation & Running
+
+### Claude Desktop
 
 To connect the Trustwise MCP Server to Claude Desktop, add the following configuration to your Claude Desktop settings:
+
+```json
+{
+  "mcpServers": {
+    "trustwise": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "TW_API_KEY",
+        "ghcr.io/trustwiseai/trustwise-mcp-server:latest"
+      ],
+      "env": {
+        "TW_API_KEY": "<YOUR_TRUSTWISE_API_KEY>"
+      }
+    }
+  }
+}
+```
+
+### Cursor
+
+To connect the Trustwise MCP Server to cursor, add the following configuration to your cursor settings:
 
 ```json
 {
