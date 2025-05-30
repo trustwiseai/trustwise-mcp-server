@@ -2,7 +2,6 @@ import os
 
 from mcp.server.fastmcp import FastMCP
 from trustwise.sdk.types import (
-    Context,
     FaithfulnessResponse,
     AnswerRelevancyResponse,
     ContextRelevancyResponse,
@@ -25,8 +24,24 @@ from trustwise.sdk.config import TrustwiseConfig
 # instantiate an MCP server client
 mcp = FastMCP("Truswise MCP")
 
+def get_trustwise_config() -> TrustwiseConfig:
+    """
+    Get the Trustwise config from the environment variables.
+
+    Returns:
+        TrustwiseConfig: The Trustwise config.
+    """
+    api_key = os.environ.get("TW_API_KEY")
+    base_url = os.environ.get("TW_BASE_URL")
+    config_kwargs = {"api_key": api_key}
+    if base_url:
+        config_kwargs["base_url"] = base_url
+    return TrustwiseConfig(**config_kwargs) 
+
+
 API_KEY = os.environ.get("TW_API_KEY")
-config = TrustwiseConfig(api_key=API_KEY)
+BASE_URL = os.environ.get("TW_BASE_URL")
+config = get_trustwise_config()
 trustwise_sdk = TrustwiseSDK(config)
 
 @mcp.tool()

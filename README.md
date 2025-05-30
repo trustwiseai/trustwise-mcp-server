@@ -41,6 +41,13 @@ To connect the Trustwise MCP Server to Claude Desktop, add the following configu
 }
 ```
 
+To point to a specific Trustwise Instance - under `env`, also set the following optional environment variable:
+ ```
+ TW_BASE_URL: "<YOUR_TRUSTWISE_INSTANCE_URL>"
+```
+
+e.g `"TW_BASE_URL": "https://api.yourdomain.ai"`
+
 ### Cursor
 
 To connect the Trustwise MCP Server to cursor, add the following configuration to your cursor settings:
