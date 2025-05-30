@@ -63,6 +63,8 @@ To connect the Trustwise MCP Server to cursor, add the following configuration t
         "--rm",
         "-e",
         "TW_API_KEY",
+        "-e",
+        "TW_BASE_URL",
         "ghcr.io/trustwiseai/trustwise-mcp-server:latest"
       ],
       "env": {
