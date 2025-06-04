@@ -466,7 +466,7 @@ wheels = [
 
 [[package]]
 name = "trustwise"
-version = "0.1.0a13"
+version = "0.1.0a15"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pydantic" },
@@ -474,9 +474,9 @@ dependencies = [
     { name = "requests" },
     { name = "urllib3" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/36/5d/ced4dc3eb3cd86300fd3781218aec2c79b26ed66f36de91c0f720aafa8c4/trustwise-0.1.0a13.tar.gz", hash = "sha256:4ad52a4d450c2e2fc9d7afc3421e3684b375ffc8834cfc5ca612fd660386414c", size = 86030 }
+sdist = { url = "https://files.pythonhosted.org/packages/11/01/5f1bfb7d280564dc7bcf253e97eb803221c80f62a68b1b42a5f3a5530511/trustwise-0.1.0a15.tar.gz", hash = "sha256:fccde46451fe159a196b7d0abe6878bd5778c081c62ce7788a8bcdb6ec683beb", size = 82373 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e5/81/3a1c649cecfde74e58ef716656b53d895e0113a6103d558903c437b2bb39/trustwise-0.1.0a13-py3-none-any.whl", hash = "sha256:6a81c5e596647bf365810e64446535922613677b62f35df7383b6d957ebfecf1", size = 43848 },
+    { url = "https://files.pythonhosted.org/packages/1a/ea/994c716a9eb0d650515ddcc89879c070c27106aad6248b74d51352f1b822/trustwise-0.1.0a15-py3-none-any.whl", hash = "sha256:2f7d458be506058107c4f366d5ec235d4690e8851b944f64b618ea72dd002f8f", size = 36568 },
 ]
 
 [[package]]
@@ -491,7 +491,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "fastapi-mcp", specifier = ">=0.3.3" },
-    { name = "trustwise", specifier = "==0.1.0a13" },
+    { name = "trustwise", specifier = "==0.1.0a15" },
 ]
 
 [[package]]
