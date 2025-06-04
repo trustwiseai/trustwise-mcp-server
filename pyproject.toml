@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "fastapi-mcp>=0.3.3",
-    "trustwise==0.1.0a13",
+    "trustwise==0.1.0a15",
 ]
 
 [build-system]
