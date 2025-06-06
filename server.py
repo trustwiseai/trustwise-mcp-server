@@ -188,7 +188,7 @@ def summarization_metric(response: str, context: list[dict]) -> SummarizationRes
             context=[{"node_id": "1", "node_score": 1.0, "node_text": "Paris is the capital of France."}]
         )
     """
-    return trustwise_sdk.metrics.summarization.evaluate(query=query, response=response, context=context)
+    return trustwise_sdk.metrics.summarization.evaluate(response=response, context=context)
 
 ## Alignment Metrics
 
