@@ -1,12 +1,12 @@
 [project]
 name = "trustwise-mcp"
-version = "0.1.0a1"
+version = "1.0.0b1"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "fastapi-mcp>=0.3.3",
-    "trustwise==0.1.0a15",
+    "trustwise==1.0.0b1",
 ]
 
 [build-system]

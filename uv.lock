@@ -466,7 +466,7 @@ wheels = [
 
 [[package]]
 name = "trustwise"
-version = "0.1.0a15"
+version = "1.0.0b1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pydantic" },
@@ -474,14 +474,13 @@ dependencies = [
     { name = "requests" },
     { name = "urllib3" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/11/01/5f1bfb7d280564dc7bcf253e97eb803221c80f62a68b1b42a5f3a5530511/trustwise-0.1.0a15.tar.gz", hash = "sha256:fccde46451fe159a196b7d0abe6878bd5778c081c62ce7788a8bcdb6ec683beb", size = 82373 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/1a/ea/994c716a9eb0d650515ddcc89879c070c27106aad6248b74d51352f1b822/trustwise-0.1.0a15-py3-none-any.whl", hash = "sha256:2f7d458be506058107c4f366d5ec235d4690e8851b944f64b618ea72dd002f8f", size = 36568 },
+    { url = "https://files.pythonhosted.org/packages/db/19/caa2e3b63e45cedc05aeac5dfc993685077c7ee9920cf1c42edaac71ccb3/trustwise-1.0.0b1-py3-none-any.whl", hash = "sha256:c51757f6bd2f6f88d25832533ba25f402ed588242baa5d593ad7ad03ea55e339", size = 36628 },
 ]
 
 [[package]]
 name = "trustwise-mcp"
-version = "0.1.0a1"
+version = "1.0.0b1"
 source = { editable = "." }
 dependencies = [
     { name = "fastapi-mcp" },
@@ -491,7 +490,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "fastapi-mcp", specifier = ">=0.3.3" },
-    { name = "trustwise", specifier = "==0.1.0a15" },
+    { name = "trustwise", specifier = "==1.0.0b1" },
 ]
 
 [[package]]
