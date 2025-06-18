@@ -81,7 +81,7 @@ Replace `<YOUR_TRUSTWISE_API_KEY>` with your actual Trustwise API key.
 
 The Trustwise MCP Server exposes the following tools (metrics). Each tool can be called with the specified arguments to evaluate a model response.
 
-### 🛡️ Safety Metrics
+### 🛡️ Trustwise Metrics
 
 | Tool Name                | Description                                               |
 |--------------------------|-----------------------------------------------------------|
@@ -91,11 +91,6 @@ The Trustwise MCP Server exposes the following tools (metrics). Each tool can be
 | `pii_metric`             | Detect PII in a response                                 |
 | `prompt_injection_metric`| Detect prompt injection risk                             |
 | `summarization_metric`   | Evaluate summarization quality                           |
-
-### 🎯 Alignment Metrics
-
-| Tool Name                | Description                                               |
-|--------------------------|-----------------------------------------------------------|
 | `clarity_metric`         | Evaluate clarity of a response                           |
 | `formality_metric`       | Evaluate formality of a response                         |
 | `helpfulness_metric`     | Evaluate helpfulness of a response                       |
@@ -103,11 +98,6 @@ The Trustwise MCP Server exposes the following tools (metrics). Each tool can be
 | `simplicity_metric`      | Evaluate simplicity of a response                        |
 | `tone_metric`            | Evaluate tone of a response                              |
 | `toxicity_metric`        | Evaluate toxicity of a response                          |
-
-### ⚡ Performance Metrics
-
-| Tool Name                | Description                                               |
-|--------------------------|-----------------------------------------------------------|
 | `carbon_metric`          | Estimate carbon footprint of a response                   |
 | `cost_metric`            | Estimate cost of a response                              |
 
