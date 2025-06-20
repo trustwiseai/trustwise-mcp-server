@@ -795,7 +795,7 @@ wheels = [
 
 [[package]]
 name = "trustwise"
-version = "1.0.0b2"
+version = "1.0.0b4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
@@ -805,7 +805,7 @@ dependencies = [
     { name = "urllib3" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/10/60/5793c1f31074cba4a9f37540200c35c9c216fa6e850095a5c74996a0a510/trustwise-1.0.0b2-py3-none-any.whl", hash = "sha256:8ba1678fab6cbaf19c3bc55a096bb044e376f7b114ed58586a0857c1b1fc38ff", size = 46302 },
+    { url = "https://files.pythonhosted.org/packages/5d/f5/c1ea3a60a4e4ad34b2ca1751f0eacd4d4189f4b20a926b6b4a085d69d76a/trustwise-1.0.0b4-py3-none-any.whl", hash = "sha256:c0b0242a431aa9b5b6a757c56f2684261349168409cc31122a79a99f446fc39d", size = 51616 },
 ]
 
 [[package]]
@@ -820,7 +820,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "fastapi-mcp", specifier = ">=0.3.3" },
-    { name = "trustwise", specifier = "==1.0.0b2" },
+    { name = "trustwise", specifier = "==1.0.0b4" },
 ]
 
 [[package]]
