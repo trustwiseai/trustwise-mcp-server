@@ -98,6 +98,10 @@ The Trustwise MCP Server exposes the following tools (metrics). Each tool can be
 | `simplicity_metric`      | Evaluate simplicity of a response                        |
 | `tone_metric`            | Evaluate tone of a response                              |
 | `toxicity_metric`        | Evaluate toxicity of a response                          |
+| `refusal_metric`        | Detect refusal to answer or comply with the query         |
+| `completion_metric`     | Evaluate completion of the query’s instruction            |
+| `adherence_metric`      | Evaluate adherence to a given policy or instruction       |
+| `stability_metric`      | Evaluate stability (consistency) of multiple responses    |
 | `carbon_metric`          | Estimate carbon footprint of a response                   |
 | `cost_metric`            | Estimate cost of a response                              |
 
