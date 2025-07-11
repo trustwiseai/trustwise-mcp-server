@@ -520,7 +520,7 @@ def cost_metric(
         trustwise_sdk.metrics.cost.evaluate(
             model_name="gpt-3.5-turbo",
             model_type="LLM",
-            model_provider="OpenAI",
+            model_provider="openai",
             number_of_queries=5,
             total_prompt_tokens=950,
             total_completion_tokens=50
