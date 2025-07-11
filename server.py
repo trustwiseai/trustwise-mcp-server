@@ -17,6 +17,10 @@ from trustwise.sdk.types import (
     ToxicityResponse,
     CarbonResponse,
     CostResponse,
+    StabilityResponse,
+    RefusalResponse,
+    CompletionResponse,
+    AdherenceResponse,
 )
 from trustwise.sdk import TrustwiseSDK
 from trustwise.sdk.config import TrustwiseConfig
@@ -346,6 +350,100 @@ def toxicity_metric(response: str) -> ToxicityResponse:
         )
     """
     return trustwise_sdk.metrics.toxicity.evaluate(response=response)
+
+
+@mcp.tool()
+def refusal_metric(query: str, response: str) -> RefusalResponse:
+    """
+    Trustwise Metric (refusal): Evaluate the likelihood that a response is a refusal to answer or comply with the query.
+
+    Args:
+        query (str): The input prompt/query sent to the LLM or agent.
+        response (str): The response from LLM or agent to evaluate.
+
+    Returns:
+        RefusalResponse containing the evaluation results
+
+    Raises:
+        TrustwiseValidationError: If not all required fields are provided
+
+    Example Request:
+        trustwise_sdk.metrics.refusal.evaluate(
+            query="What is the capital of France?",
+            response="I'm sorry, I can't answer that."
+        )
+    """
+    return trustwise_sdk.metrics.refusal.evaluate(query=query, response=response)
+
+
+@mcp.tool()
+def completion_metric(query: str, response: str) -> CompletionResponse:
+    """
+    Trustwise Metric (completion): Evaluate how well the response completes or follows the query’s instruction.
+
+    Args:
+        query (str): The input prompt/query sent to the LLM or agent.
+        response (str): The response from LLM or agent to evaluate.
+
+    Returns:
+        CompletionResponse containing the evaluation results
+
+    Raises:
+        TrustwiseValidationError: If not all required fields are provided
+
+    Example Request:
+        trustwise_sdk.metrics.completion.evaluate(
+            query="What is the capital of France?",
+            response="Paris is the capital of France."
+        )
+    """
+    return trustwise_sdk.metrics.completion.evaluate(query=query, response=response)
+
+
+@mcp.tool()
+def adherence_metric(policy: str, response: str) -> AdherenceResponse:
+    """
+    Trustwise Metric (adherence): Evaluate how well the response adheres to a given policy or instruction.
+
+    Args:
+        policy (str): The policy or instruction the response should adhere to.
+        response (str): The response from LLM or agent to evaluate.
+
+    Returns:
+        AdherenceResponse containing the evaluation results
+
+    Raises:
+        TrustwiseValidationError: If not all required fields are provided
+
+    Example Request:
+        trustwise_sdk.metrics.adherence.evaluate(
+            policy="Do not mention user names in the response.",
+            response="The user has completed the task."
+        )
+    """
+    return trustwise_sdk.metrics.adherence.evaluate(policy=policy, response=response)
+
+
+@mcp.tool()
+def stability_metric(responses: list[str]) -> StabilityResponse:
+    """
+    Trustwise Metric (stability): Evaluate the stability (consistency) of multiple responses to the same prompt.
+
+    Args:
+        responses (list[str]): List of responses to evaluate for stability.
+
+    Returns:
+        StabilityResponse containing the evaluation results
+
+    Raises:
+        TrustwiseValidationError: If not all required fields are provided
+
+    Example Request:
+        trustwise_sdk.metrics.stability.evaluate(
+            responses=["Paris is the capital of France.", "Paris is the capital of France."]
+        )
+    """
+    return trustwise_sdk.metrics.stability.evaluate(responses=responses)
 
 
 # Performance Metrics
