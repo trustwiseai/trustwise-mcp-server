@@ -18,6 +18,7 @@ from trustwise.sdk.types import (
     CarbonResponse,
     CostResponse,
     StabilityResponse,
+    RefusalResponse,
 )
 from trustwise.sdk import TrustwiseSDK
 from trustwise.sdk.config import TrustwiseConfig
@@ -347,6 +348,30 @@ def toxicity_metric(response: str) -> ToxicityResponse:
         )
     """
     return trustwise_sdk.metrics.toxicity.evaluate(response=response)
+
+
+@mcp.tool()
+def refusal_metric(query: str, response: str) -> RefusalResponse:
+    """
+    Trustwise Metric (refusal): Evaluate the likelihood that a response is a refusal to answer or comply with the query.
+
+    Args:
+        query: The input query string.
+        response: The response to evaluate for refusal.
+
+    Returns:
+        RefusalResponse containing the evaluation results
+
+    Raises:
+        TrustwiseValidationError: If not all required fields are provided
+
+    Example Request:
+        trustwise_sdk.metrics.refusal.evaluate(
+            query="What is the capital of France?",
+            response="I'm sorry, I can't answer that."
+        )
+    """
+    return trustwise_sdk.metrics.refusal.evaluate(query=query, response=response)
 
 
 @mcp.tool()
