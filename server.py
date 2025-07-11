@@ -17,6 +17,7 @@ from trustwise.sdk.types import (
     ToxicityResponse,
     CarbonResponse,
     CostResponse,
+    StabilityResponse,
 )
 from trustwise.sdk import TrustwiseSDK
 from trustwise.sdk.config import TrustwiseConfig
@@ -346,6 +347,28 @@ def toxicity_metric(response: str) -> ToxicityResponse:
         )
     """
     return trustwise_sdk.metrics.toxicity.evaluate(response=response)
+
+
+@mcp.tool()
+def stability_metric(responses: list[str]) -> StabilityResponse:
+    """
+    Trustwise Metric (stability): Evaluate the stability (consistency) of multiple responses to the same prompt.
+
+    Args:
+        responses: List of responses to evaluate for stability.
+
+    Returns:
+        StabilityResponse containing the evaluation results
+
+    Raises:
+        TrustwiseValidationError: If not all required fields are provided
+
+    Example Request:
+        trustwise_sdk.metrics.stability.evaluate(
+            responses=["Paris is the capital of France.", "Paris is the capital of France."]
+        )
+    """
+    return trustwise_sdk.metrics.stability.evaluate(responses=responses)
 
 
 # Performance Metrics
